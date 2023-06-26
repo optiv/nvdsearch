@@ -1,4 +1,4 @@
-# nvdsearch
+# nvdsearch - v1.0 - [@h0useh3ad](https://github.com/h0useh3ad)
 A National Vulnerability Database (NVD) API query tool
 
 ## Install
