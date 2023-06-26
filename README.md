@@ -68,9 +68,12 @@ $ ./nvdsearch -cpe 'cpe:2.3:a:progress:moveit_transfer:*:*:*:*:*:*:*:*'
 ```
 
 ### Write to CSV
-The `product`, `cveid`, and `cpe` options will write to CSV format by providing a filename with the -output flag
+The `product`, `cveid`, `cpe`, and `cpelookup` options will write to CSV format by providing a filename with the -output flag
 
 ```
-$ ./nvdsearch -vendor openssl -product -openssl -version 1.0.2k -output openssl_1.0.2k
+$ ./nvdsearch -vendor openssl -product -openssl -version 1.0.2k -output openssl_1.0.2k_cves
+```
+```
+$ ./nvdsearch -cpelookup apache -output apache_cpe_lookup
 ```
 
