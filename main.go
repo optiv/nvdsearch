@@ -44,7 +44,8 @@ func main() {
 		if !strings.HasPrefix(cveID, "CVE-") {
 			cveID = "CVE-" + cveID
 		}
-		cveID = url.QueryEscape(cveID)
+		cveID = url.PathEscape(cveID)
+		cveID = strings.Replace(cveID, "%E2%80%91", "%2D", -1) // Replace the encoding for hyphen
 		apiURL := fmt.Sprintf("%s?cveId=%s", cveBaseURL, cveID)
 		color.Cyan("\nRequesting: %s\n\n", apiURL)
 		query.CveQuery(apiURL, cveID, *output)
